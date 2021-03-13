@@ -28,6 +28,16 @@ public class LinkedList<K> {
         return tempNode;
     }
 
+    public void append(Node<K> newNode) {
+        if (tail == null) {
+            head = newNode;
+            tail = newNode;
+        } else {
+            this.tail.setNext(newNode);
+            this.tail = newNode;
+        }
+    }
+
     public void printNode() {
         Node<K> tempNode = head;
         while (tempNode != null) {

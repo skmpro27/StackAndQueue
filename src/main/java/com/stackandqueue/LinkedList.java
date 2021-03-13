@@ -22,6 +22,12 @@ public class LinkedList<K> {
         }
     }
 
+    public Node<K> removeHead() {
+        Node<K> tempNode = this.head;
+        this.head = head.getNext();
+        return tempNode;
+    }
+
     public void printNode() {
         Node<K> tempNode = head;
         while (tempNode != null) {

@@ -15,4 +15,12 @@ public class Stack<K> {
         linkedList.printNode();
         return linkedList.head;
     }
+
+    public K peak() {
+        return linkedList.head.getKey();
+    }
+
+    public void pop() {
+        linkedList.removeHead();
+    }
 }
